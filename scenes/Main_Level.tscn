@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://wc18w64gav0k"]
+[gd_scene load_steps=9 format=3 uid="uid://wc18w64gav0k"]
 
 [ext_resource type="Texture2D" uid="uid://glntvhc5lj78" path="res://assets/Layout-map inspo.png" id="1_hnx64"]
 [ext_resource type="PackedScene" uid="uid://thjaalvvn47s" path="res://scenes/Player.tscn" id="2_gksj5"]
@@ -12,6 +12,10 @@ albedo_color = Color(0.99163634, 0.5825982, 0.6465718, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1hrby"]
 size = Vector3(2, 0.1, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_71nk4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o2bqn"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -42,3 +46,12 @@ shape = SubResource("BoxShape3D_1hrby")
 
 [node name="Player" parent="." instance=ExtResource("2_gksj5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 42, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_71nk4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_o2bqn")
