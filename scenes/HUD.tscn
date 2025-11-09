@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dx3mghfr26r33"]
+
+[node name="HUD" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GrabLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Press E"
+horizontal_alignment = 1
+vertical_alignment = 1

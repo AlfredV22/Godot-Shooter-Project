@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://wc18w64gav0k"]
+[gd_scene load_steps=10 format=3 uid="uid://wc18w64gav0k"]
 
 [ext_resource type="Texture2D" uid="uid://glntvhc5lj78" path="res://assets/Layout-map inspo.png" id="1_hnx64"]
 [ext_resource type="PackedScene" uid="uid://thjaalvvn47s" path="res://scenes/Player.tscn" id="2_gksj5"]
+[ext_resource type="PackedScene" uid="uid://dx3mghfr26r33" path="res://scenes/HUD.tscn" id="3_o2bqn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gksj5"]
 
@@ -55,3 +56,5 @@ mesh = SubResource("BoxMesh_71nk4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("BoxShape3D_o2bqn")
+
+[node name="HUD" parent="." instance=ExtResource("3_o2bqn")]
