@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm33u738kdipv"]
+
+[ext_resource type="Script" uid="uid://dlcd2l6wf1d8w" path="res://scenes/Melee_Weapon.gd" id="1_tp742"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_e4wso"]
+
+[node name="Melee_Weapon" type="Node3D"]
+script = ExtResource("1_tp742")
+
+[node name="Fist_Placeholder" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.3, 0, -0.3)
+mesh = SubResource("BoxMesh_e4wso")

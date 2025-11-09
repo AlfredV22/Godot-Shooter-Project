@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 # Adjust these settings as needed
-const SPEED = 5.0
+const SPEED = 20.0
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.002 
 const CAMERA_VERTICAL_LIMIT = 75 # Camera threshold
