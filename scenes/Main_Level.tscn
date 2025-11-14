@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://wc18w64gav0k"]
+[gd_scene load_steps=12 format=3 uid="uid://wc18w64gav0k"]
 
 [ext_resource type="Texture2D" uid="uid://glntvhc5lj78" path="res://assets/Layout-map inspo.png" id="1_hnx64"]
 [ext_resource type="PackedScene" uid="uid://thjaalvvn47s" path="res://scenes/Player.tscn" id="2_gksj5"]
 [ext_resource type="PackedScene" uid="uid://dx3mghfr26r33" path="res://scenes/HUD.tscn" id="3_o2bqn"]
+[ext_resource type="PackedScene" uid="uid://k5hqvtienapx" path="res://scenes/modular_wall_8x10m.tscn" id="4_1215w"]
+[ext_resource type="PackedScene" uid="uid://leu0axqvsfif" path="res://scenes/modular_ceiling_8x_10m.tscn" id="5_lnng2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gksj5"]
 
@@ -26,7 +28,6 @@ light_energy = 0.505
 
 [node name="Referencia_Mapa" type="Sprite3D" parent="."]
 transform = Transform3D(100, 0, 0, 0, -4.371139e-06, 100, 0, -100, -4.371139e-06, 0, -0.01, 0)
-visible = false
 texture = ExtResource("1_hnx64")
 
 [node name="Scale Reference" type="MeshInstance3D" parent="."]
@@ -35,6 +36,7 @@ mesh = SubResource("BoxMesh_gksj5")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(525, 0, 0, 0, 2, 0, 0, 0, 380, 0, 0, 0)
+visible = false
 mesh = SubResource("PlaneMesh_lfsgk")
 surface_material_override/0 = SubResource("StandardMaterial3D_ipew4")
 
@@ -46,7 +48,7 @@ visible = false
 shape = SubResource("BoxShape3D_1hrby")
 
 [node name="Player" parent="." instance=ExtResource("2_gksj5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 42, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -266, 42, 0)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
@@ -58,3 +60,99 @@ mesh = SubResource("BoxMesh_71nk4")
 shape = SubResource("BoxShape3D_o2bqn")
 
 [node name="HUD" parent="." instance=ExtResource("3_o2bqn")]
+
+[node name="Building_Bank" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -251, 0, -33)
+
+[node name="Modular_Wall_8x10m" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, -15)
+
+[node name="Modular_Wall_8x10m7" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -15)
+
+[node name="Modular_Wall_8x10m8" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -15)
+
+[node name="Modular_Wall_8x10m9" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -15)
+
+[node name="Modular_Wall_8x10m10" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -15)
+
+[node name="Modular_Wall_8x10m11" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -15)
+
+[node name="Modular_Wall_8x10m12" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -15)
+
+[node name="Modular_Wall_8x10m13" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -15)
+
+[node name="Modular_Wall_8x10m14" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -15)
+
+[node name="Modular_Wall_8x10m15" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 47, 0, -10.099998)
+
+[node name="Modular_Wall_8x10m16" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 47, 0, -0.099998474)
+
+[node name="Modular_Wall_8x10m17" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 47, 0, 9.900002)
+
+[node name="Modular_Wall_8x10m18" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-0.8660255, 0, -0.5, 0, 1, 0, 0.5, 0, -0.8660255, 42.800003, 0, 17.400002)
+
+[node name="Modular_Wall_8x10m20" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-0.86602545, 0, -0.49999994, 0, 1, 0, 0.49999994, 0, -0.86602545, 24.200012, 0, 22.5)
+
+[node name="Modular_Wall_8x10m19" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, -0.99999994, 33.5, 0, 20)
+
+[node name="Modular_Wall_8x10m2" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -43, 0, -10.099998)
+
+[node name="Modular_Wall_8x10m3" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -43, 0, -0.099998474)
+
+[node name="Modular_Wall_8x10m4" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -43, 0, 9.900002)
+
+[node name="Modular_Wall_8x10m23" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -38, 0, 14.900002)
+
+[node name="Modular_Wall_8x10m25" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -28, 0, 14.900002)
+
+[node name="Modular_Wall_8x10m26" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -18, 0, 14.900002)
+
+[node name="Modular_Wall_8x10m27" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -13, 0, 10.000002)
+
+[node name="Modular_Wall_8x10m28" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -13, 0, 0)
+
+[node name="Modular_Wall_8x10m5" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -43, 0, 19.900002)
+
+[node name="Modular_Wall_8x10m6" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.100006, 0, 24.900002)
+
+[node name="Modular_Wall_8x10m21" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.899994, 0, 24.900002)
+
+[node name="Modular_Wall_8x10m22" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.899994, 0, 24.900002)
+
+[node name="Modular_Wall_8x10m24" parent="Building_Bank" instance=ExtResource("4_1215w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.100006, 0, 24.900002)
+
+[node name="Modular_Ceiling_8x10m" parent="Building_Bank" instance=ExtResource("5_lnng2")]
+transform = Transform3D(9, 0, 0, 0, -1.5993997e-07, -1.042, 0, 3.659, -4.5547267e-08, 2, 7.8, -14.899998)
+
+[node name="Modular_Ceiling_8x10m2" parent="Building_Bank" instance=ExtResource("5_lnng2")]
+transform = Transform3D(5.6448, 0, 0, 0, -5.9781165e-08, -1.0379999, 0, 1.3676335, -4.5372417e-08, -14.699982, 7.8, 14.000004)
+
+[node name="Modular_Ceiling_8x10m3" parent="Building_Bank" instance=ExtResource("5_lnng2")]
+transform = Transform3D(0.23918837, -1.0198072, 3.9293667e-08, 0, -5.1473307e-08, -1.0379999, 0.41428646, 0.5887859, -2.2686203e-08, 27.000015, 7.8, 18.100002)
